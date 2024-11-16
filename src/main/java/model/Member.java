@@ -1,12 +1,11 @@
 package model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -20,4 +19,7 @@ public class Member {
     private String phoneNumber;
     private LocalDate startDate;
     private int durationInMonths;
+
+    @ManyToMany(mappedBy = "members")
+    private List<Tournament> tournaments = new ArrayList<>();
 }
