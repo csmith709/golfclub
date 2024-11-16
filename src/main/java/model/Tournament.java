@@ -21,4 +21,11 @@ public class Tournament {
 
     @ManyToMany
     private List<Member> participants = new ArrayList<>();
+
+    @JoinTable(
+            name = "tournament_members",
+            joinColumns = @JoinColumn(name = "tournament_id"),
+            inverseJoinColumns = @JoinColumn(name = "member_id")
+    )
+    private List<Member> members = new ArrayList<>();
 }
