@@ -1,4 +1,4 @@
-package model;
+package com.Keyin.golfclub.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -17,6 +17,7 @@ public class Member {
     private String address;
     private String email;
     private String phoneNumber;
+    private String membershipType;
     private LocalDate startDate;
     private int durationInMonths;
 

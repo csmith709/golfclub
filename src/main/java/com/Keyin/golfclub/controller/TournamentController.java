@@ -1,10 +1,10 @@
-package controller;
+package com.Keyin.golfclub.controller;
 
-import model.Member;
-import model.Tournament;
+import com.Keyin.golfclub.model.Member;
+import com.Keyin.golfclub.model.Tournament;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import service.TournamentService; // Use the service instead of the repository
+import com.Keyin.golfclub.service.TournamentService; // Service layer dependency
 
 import java.util.List;
 
@@ -13,29 +13,29 @@ import java.util.List;
 public class TournamentController {
 
     @Autowired
-    private TournamentService tournamentService; // Autowire service layer
+    private TournamentService tournamentService; // Autowire the service layer
 
     // Create a new tournament
     @PostMapping
     public Tournament createTournament(@RequestBody Tournament tournament) {
-        return tournamentService.addTournament(tournament);  // Use service method
+        return tournamentService.addTournament(tournament);  // Call service layer method
     }
 
     // Get all tournaments
     @GetMapping
     public List<Tournament> getAllTournaments() {
-        return tournamentService.getAllTournaments();  // Use service method
+        return tournamentService.getAllTournaments();  // Call service layer method
     }
 
     // Add member to tournament
     @PostMapping("/{tournamentId}/members/{memberId}")
     public Tournament addMemberToTournament(@PathVariable Long tournamentId, @PathVariable Long memberId) {
-        return tournamentService.addMemberToTournament(tournamentId, memberId); // Use service method
+        return tournamentService.addMemberToTournament(tournamentId, memberId); // Call service layer method
     }
 
     // Get all members in a tournament
     @GetMapping("/{tournamentId}/members")
     public List<Member> getMembersInTournament(@PathVariable Long tournamentId) {
-        return tournamentService.getMembersInTournament(tournamentId); // Use service method
+        return tournamentService.getMembersInTournament(tournamentId); // Call service layer method
     }
 }

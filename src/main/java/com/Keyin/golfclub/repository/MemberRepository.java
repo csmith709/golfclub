@@ -1,6 +1,6 @@
-package repository;
+package com.Keyin.golfclub.repository;
 
-import model.Member;
+import com.Keyin.golfclub.model.Member;
 
 import java.time.LocalDate;
 import java.util.List;

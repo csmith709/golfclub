@@ -1,7 +1,7 @@
-package repository;
+package com.Keyin.golfclub.repository;
 
-import model.Member;
-import model.Tournament;
+import com.Keyin.golfclub.model.Member;
+import com.Keyin.golfclub.model.Tournament;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

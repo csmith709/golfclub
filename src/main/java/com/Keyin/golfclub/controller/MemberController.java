@@ -1,9 +1,9 @@
-package controller;
+package com.Keyin.golfclub.controller;
 
-import model.Member;
+import com.Keyin.golfclub.model.Member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import repository.MemberRepository;
+import com.Keyin.golfclub.repository.MemberRepository;
 
 import java.util.List;
 
@@ -13,22 +13,21 @@ public class MemberController {
     @Autowired
     private MemberRepository memberRepository;
 
-//    adding a new member
+    // Adding a new member
     @PostMapping
     public Member createMember(@RequestBody Member member) {
         return memberRepository.save(member);
     }
 
-//    get all members
+    // Get all members
     @GetMapping
     public List<Member> getAllMembers() {
         return memberRepository.findAll();
     }
 
-//    search for member by name
+    // Search for member by name
     @GetMapping("/search")
-    public List<Member> searchMembers(@RequestParam  String name) {
+    public List<Member> searchMembers(@RequestParam String name) {
         return memberRepository.findByNameIgnoreCase(name);
     }
-
 }

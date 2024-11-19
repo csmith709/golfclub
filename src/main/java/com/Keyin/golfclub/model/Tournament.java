@@ -1,4 +1,4 @@
-package model;
+package com.Keyin.golfclub.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -20,12 +20,10 @@ public class Tournament {
     private Double cashPrize;
 
     @ManyToMany
-    private List<Member> participants = new ArrayList<>();
-
     @JoinTable(
-            name = "tournament_members",
-            joinColumns = @JoinColumn(name = "tournament_id"),
-            inverseJoinColumns = @JoinColumn(name = "member_id")
+            name = "tournament_members", // Join table name
+            joinColumns = @JoinColumn(name = "tournament_id"), // Foreign key to Tournament
+            inverseJoinColumns = @JoinColumn(name = "member_id") // Foreign key to Member
     )
-    private List<Member> members = new ArrayList<>();
+    private List<Member> members = new ArrayList<>(); // Many-to-many relationship
 }

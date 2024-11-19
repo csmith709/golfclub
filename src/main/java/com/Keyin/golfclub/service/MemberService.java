@@ -1,9 +1,9 @@
-package service;
+package com.Keyin.golfclub.service;
 
-import model.Member;
+import com.Keyin.golfclub.model.Member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.MemberRepository;
+import com.Keyin.golfclub.repository.MemberRepository;
 
 import java.time.LocalDate;
 import java.util.List;

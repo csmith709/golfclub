@@ -1,11 +1,11 @@
-package service;
+package com.Keyin.golfclub.service;
 
-import model.Member;
-import model.Tournament;
+import com.Keyin.golfclub.model.Member;
+import com.Keyin.golfclub.model.Tournament;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.MemberRepository;
-import repository.TournamentRepository;
+import com.Keyin.golfclub.repository.MemberRepository;
+import com.Keyin.golfclub.repository.TournamentRepository;
 
 import java.time.LocalDate;
 import java.util.List;
