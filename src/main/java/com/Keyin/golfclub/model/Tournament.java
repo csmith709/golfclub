@@ -26,4 +26,15 @@ public class Tournament {
             inverseJoinColumns = @JoinColumn(name = "member_id") // Foreign key to Member
     )
     private List<Member> members = new ArrayList<>(); // Many-to-many relationship
+
+    @Override
+    public String toString() {
+        return "Tournament{" +
+                "startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", location='" + location + '\'' +
+                ", entryFee=" + entryFee +
+                ", cashPrize=" + cashPrize +
+                '}';
+    }
 }

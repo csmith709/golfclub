@@ -12,4 +12,3 @@ class GolfClubTournamentApplicationTests {
         // Basic test to ensure the application context loads
     }
 }
-

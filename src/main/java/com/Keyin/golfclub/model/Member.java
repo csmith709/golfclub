@@ -23,4 +23,14 @@ public class Member {
 
     @ManyToMany(mappedBy = "members")
     private List<Tournament> tournaments = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return "Member{" +
+                "name='" + name + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", membershipType='" + membershipType + '\'' +
+                ", startDate=" + startDate +
+                '}';
+    }
 }

@@ -19,7 +19,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>3.3.5</version>
+<!--            <version>3.3.5</version>-->
         </dependency>
 
         <!-- Spring Boot Starter Data JPA -->
@@ -42,6 +42,14 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <scope>provided</scope>
+            <version>6.1.0</version>
+        </dependency>
+
+
 
         <!-- MySQL Connector -->
         <dependency>
@@ -55,8 +63,22 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.36</version>
+<!--            <version>1.18.36</version>-->
             <optional>true</optional>
+        </dependency>
+
+        <!-- Spring Web for REST communication -->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework</groupId>-->
+<!--            <artifactId>spring-web</artifactId>-->
+<!--            <version>6.2.0</version>-->
+<!--        </dependency>-->
+
+        <!-- Jackson for JSON processing -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.15.2</version>
         </dependency>
     </dependencies>
 
@@ -65,12 +87,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.1.2</version>
+<!--                <version>3.1.2</version>-->
             </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>3.3.5</version>
+<!--                <version>3.4.0</version>-->
                 <configuration>
                     <mainClass>com.Keyin.golfclub.GolfClubTournamentApplication</mainClass>
                 </configuration>
