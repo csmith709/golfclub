@@ -42,12 +42,7 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>jakarta.servlet</groupId>
-            <artifactId>jakarta.servlet-api</artifactId>
-            <scope>provided</scope>
-            <version>6.1.0</version>
-        </dependency>
+
 
 
 
@@ -60,12 +55,8 @@
         </dependency>
 
         <!-- Lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-<!--            <version>1.18.36</version>-->
-            <optional>true</optional>
-        </dependency>
+
+
 
         <!-- Spring Web for REST communication -->
 <!--        <dependency>-->
