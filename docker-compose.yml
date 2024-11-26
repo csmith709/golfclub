@@ -6,9 +6,9 @@ services:
       context: /Users/keyinstudent_1/IdeaProjects/golfclub/golfclub
       dockerfile: Dockerfile
     ports:
-      - "8080:8080" # Maps the app container's port 8080 to the host machine
+      - "8081:8080" # Maps the app container's port 8080 to the host machine
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3307/golfclub
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/golfclub
       - SPRING_DATASOURCE_USERNAME=charitymsmith
       - SPRING_DATASOURCE_PASSWORD=W1-y5glPb
     depends_on:
