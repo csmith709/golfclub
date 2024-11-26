@@ -7,8 +7,8 @@ LABEL authors="keyinstudent"
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy the JAR file (assuming you've already built it via Maven/Gradle)
-COPY target/golfclub.jar app.jar
+# Copy the correct JAR file to the container
+COPY target/golfclub-tournament-1.0.0.jar app.jar
 
 # Make port 8080 available to the world outside the container
 EXPOSE 8080

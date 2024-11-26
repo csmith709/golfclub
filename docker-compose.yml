@@ -1,0 +1,31 @@
+#version: '3.8'
+
+services:
+  app:
+    build:
+      context: /Users/keyinstudent_1/IdeaProjects/golfclub/golfclub
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080" # Maps the app container's port 8080 to the host machine
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3307/golfclub
+      - SPRING_DATASOURCE_USERNAME=charitymsmith
+      - SPRING_DATASOURCE_PASSWORD=W1-y5glPb
+    depends_on:
+      - db
+    restart: always # Ensures the app restarts on failure
+
+  db:
+    image: mysql:8.0
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: Keyin2021
+      MYSQL_DATABASE: golfclub
+    ports:
+      - "3307:3306" # Maps MySQL port to the host machine
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always # Ensures the DB restarts on failure
+
+volumes:
+  db_data:
